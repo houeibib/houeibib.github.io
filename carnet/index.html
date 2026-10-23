@@ -1,0 +1,21 @@
+---
+title_fr: Carnet
+title_en: Notebook
+lead_fr: "Notes, figures et réflexions, sur la recherche ou ailleurs."
+lead_en: "Notes, figures and thoughts, about research or anything else."
+---
+{% assign mois = "janvier,février,mars,avril,mai,juin,juillet,août,septembre,octobre,novembre,décembre" | split: "," %}
+<div class="gut"><div class="max page-sec">
+  <div class="posts">
+    {% for p in site.posts %}
+    {% assign m = p.date | date: "%-m" | minus: 1 %}
+    <a class="post" href="{{ p.url | relative_url }}" style="text-decoration:none;color:inherit">
+      <span class="meta fr">{{ p.date | date: "%-d" }} {{ mois[m] }} {{ p.date | date: "%Y" }} · {{ p.tag_fr }}</span>
+      <span class="meta en">{{ p.date | date: "%-d %B %Y" }} · {{ p.tag_en }}</span>
+      <h3 class="fr">{{ p.title_fr }}</h3><h3 class="en">{{ p.title_en }}</h3>
+      <p class="fr">{{ p.summary_fr }}</p><p class="en">{{ p.summary_en }}</p>
+    </a>
+    {% endfor %}
+    <div class="todo-card"><span class="fr">Prochain billet</span><span class="en">Next post</span></div>
+  </div>
+</div></div>

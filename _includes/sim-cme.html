@@ -1,0 +1,22 @@
+{% comment %}
+  Panneau CME. Paramètres : href (le panneau devient un lien vers cette page) ou big=true (grand format, pause).
+{% endcomment %}
+{% if include.href %}<a class="panel p-cme" href="{{ include.href | relative_url }}">{% else %}<div class="panel p-cme{% if include.big %} big{% endif %}">{% endif %}
+  <video id="cme" muted loop playsinline preload="auto" data-base="{{ '/media/cme' | relative_url }}" data-v="{{ site.time | date: '%s' }}"
+         poster="{{ '/media/cme_poster.jpg' | relative_url }}"
+         aria-label="Simulation MPI-AMRVAC : une éjection de masse coronale quitte le Soleil et traverse l'orbite terrestre"></video>
+  <div class="anno" aria-hidden="true">
+    <div class="ann down a-sun" data-k="sun"><span class="ln"></span><span class="lb"><span class="fr">Soleil</span><span class="en">Sun</span></span></div>
+    <div class="ann down a-earth" data-k="earth"><span class="ln"></span><span class="lb"><span class="fr">Terre</span><span class="en">Earth</span></span></div>
+    <div class="ann side a-shock" data-k="shock"><span class="ln"></span><span class="lb"><span class="fr">choc</span><span class="en">shock</span></span></div>
+    <div class="ann up a-cme" data-k="cme"><span class="ln"></span><span class="lb"><span class="fr">nuage éjecté</span><span class="en">ejected cloud</span></span></div>
+  </div>
+  <div class="plabel"><b>CME</b><span>~10<sup>11</sup> m · ~10<sup>5</sup> s{% if include.big %} · <span class="fr">jour <em class="day" data-l="fr">0,0</em></span><span class="en">day <em class="day" data-l="en">0.0</em></span>{% endif %}</span></div>
+  <div class="pinfo hov">
+    <p class="cap fr">Un nuage de plasma magnétisé éjecté par le Soleil atteint l'orbite terrestre en ~1,2 jour. Simulation MHD 3D (MPI-AMRVAC), plan équatorial.</p>
+    <p class="cap en">A magnetised plasma cloud ejected by the Sun reaches Earth's orbit in ~1.2 days. 3D MHD simulation (MPI-AMRVAC), equatorial plane.</p>
+    {% if include.href %}<p class="go"><span class="fr">Comprendre cette simulation →</span><span class="en">Understand this simulation →</span></p>{% endif %}
+  </div>
+  {% if include.big %}<button class="pp" type="button" aria-label="Pause / lecture">❚❚</button>{% endif %}
+{% if include.href %}</a>{% else %}</div>{% endif %}
+<script src="{{ '/media/cme_tracks.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>

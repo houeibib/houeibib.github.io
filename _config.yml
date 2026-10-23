@@ -1,0 +1,20 @@
+# Configuration du site, lue par GitHub Pages (Jekyll).
+title: Ahmed Houeibib
+url: "https://houeibib.github.io"   # adresse finale, à ajuster lors de la mise en ligne
+baseurl: ""                          # "" si le dépôt s'appelle houeibib.github.io, sinon "/nom-du-depot"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: null                  # les équations $$…$$ sont affichées par KaTeX dans le navigateur
+  parse_block_html: true             # Markdown autorisé dans <div class="fr"> … </div>
+
+# Billets du carnet : /carnet/2026/l-article-de-these/
+permalink: /carnet/:year/:title/
+
+# Carnet désactivé pour l'instant : retirer « carnet » et « _posts » de cette liste (et remettre le lien dans _includes/nav.html)
+exclude: [README.md, Gemfile, Gemfile.lock, carnet, _posts]
+
+defaults:
+  - scope: {path: ""}
+    values: {layout: default}

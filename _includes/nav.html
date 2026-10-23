@@ -1,0 +1,11 @@
+<nav class="gut"><div class="max">
+  <a class="mark" href="{{ '/' | relative_url }}">A. Houeibib</a>
+  <a class="l" href="{{ '/recherche/' | relative_url }}"{% if page.url contains '/recherche/' %} aria-current="page"{% endif %}><span class="fr">Recherche</span><span class="en">Research</span></a>
+  <a class="l" href="{{ '/publications/' | relative_url }}"{% if page.url contains '/publications/' %} aria-current="page"{% endif %}>Publications</a>
+  <a class="l" href="{{ '/parcours/' | relative_url }}"{% if page.url contains '/parcours/' %} aria-current="page"{% endif %}><span class="fr">Parcours</span><span class="en">Background</span></a>
+  <div class="lang" role="group" aria-label="Langue / Language">
+    <button type="button" data-l="fr" aria-pressed="true">FR</button>
+    <button type="button" data-l="en" aria-pressed="false">EN</button>
+  </div>
+  <button class="theme" type="button" aria-label="Thème : auto" title="Thème : auto">◐</button>
+</div></nav>

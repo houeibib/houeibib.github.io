@@ -1,0 +1,22 @@
+{% comment %}
+  Panneau LWFA. Paramètres : href (le panneau devient un lien vers cette page) ou big=true (grand format, pause).
+{% endcomment %}
+{% if include.href %}<a class="panel p-lwfa" href="{{ include.href | relative_url }}">{% else %}<div class="panel p-lwfa{% if include.big %} big{% endif %}">{% endif %}
+  <video id="lwfa" muted loop playsinline preload="auto" data-base="{{ '/media/lwfa' | relative_url }}" data-v="{{ site.time | date: '%s' }}"
+         poster="{{ '/media/lwfa_poster.jpg' | relative_url }}"
+         aria-label="Simulation Smilei : un laser intense creuse une bulle dans un plasma et accélère des électrons dans son sillage"></video>
+  <div class="anno" aria-hidden="true">
+    <div class="ann up a-laser" data-k="laser"><span class="ln"></span><span class="lb">laser →</span></div>
+    <div class="ann up a-bunch" data-k="bunch"><span class="ln"></span><span class="dot"></span><span class="lb"><span class="fr">e⁻ accélérés</span><span class="en">accelerated e⁻</span> · <b class="mev">0</b> MeV</span></div>
+  </div>
+  <div class="plabel"><b>LWFA</b><span>~10<sup>−5</sup> m · ~10<sup>−12</sup> s</span></div>
+  <div class="pinfo">
+    <p class="cap fr">Une impulsion laser traverse un gaz ionisé (plasma) et creuse une bulle dans son sillage ; des électrons piégés y gagnent ~200 MeV en 0,3 mm. Simulation PIC (Smilei).</p>
+    <p class="cap en">A laser pulse crosses an ionised gas (plasma) and carves a bubble in its wake; trapped electrons gain ~200 MeV in 0.3 mm. PIC simulation (Smilei).</p>
+    {% if include.href %}<p class="go"><span class="fr">Comprendre cette simulation →</span><span class="en">Understand this simulation →</span></p>{% endif %}
+    <div class="prog"><span class="fr">parcours dans le gaz</span><span class="en">distance in the gas</span><span class="tk"></span><span class="tv">290 µm</span></div>
+  </div>
+  <div class="ptag a-plasma" aria-hidden="true"><span class="fr">plasma (gaz ionisé)</span><span class="en">plasma (ionised gas)</span></div>
+  {% if include.big %}<button class="pp" type="button" aria-label="Pause / lecture">❚❚</button>{% endif %}
+{% if include.href %}</a>{% else %}</div>{% endif %}
+<script src="{{ '/media/lwfa_tracks.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>

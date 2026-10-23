@@ -1,0 +1,29 @@
+# Publications : une entrée par article. Elles apparaissent automatiquement
+# sur la page Publications et sur la page « physique » du sujet (topic : cme ou lwfa).
+# Champs possibles : year, title, authors, venue, badge, arxiv, doi, hal, pdf, topic.
+
+- year: 2026
+  title: "Acceleration of relativistic protons in a solar wind perturbed by a coronal mass ejection"
+  authors: "<b>A. Houeibib</b>, F. Pantellini, L. Griton"
+  venue: "Astronomy & Astrophysics"
+  badge: "A&A"
+  arxiv: "2602.23723"
+  doi: "10.1051/0004-6361/202659655"
+  topic: cme
+
+- year: 2025
+  title: "Dynamics of energetic electrons scattered in the solar wind: Magnetohydrodynamics and test-particle simulations"
+  authors: "<b>A. Houeibib</b>, F. Pantellini, L. Griton"
+  venue: "Astronomy & Astrophysics 694, A211"
+  badge: "A&A"
+  arxiv: "2403.06706"
+  doi: "10.1051/0004-6361/202451436"
+  topic: cme
+
+- year: 2025
+  title: "Accélération de particules énergétiques dans les éjections de masse coronale"
+  authors: "<b>A. Houeibib</b> · dir. F. Pantellini, L. Griton"
+  venue: "Thèse de doctorat, Observatoire de Paris (ED 127), soutenue le 17 octobre 2025"
+  badge: "Thèse"
+  hal: "tel-05556589"
+  topic: cme

@@ -1,0 +1,20 @@
+{% comment %}
+  Liste des publications (_data/publications.yml). Paramètres : topic (cme, lwfa…) pour filtrer ;
+  links=true pour ajouter le lien vers la page physique du sujet.
+{% endcomment %}
+{% assign list = site.data.publications %}
+{% if include.topic %}{% assign list = list | where: "topic", include.topic %}{% endif %}
+<div class="pubs">
+{% for p in list %}
+  <div class="pub">
+    <span class="yr">{{ p.year }}</span>
+    <div>
+      <p class="t">{{ p.title }}{% if p.badge %}<span class="badge">{{ p.badge }}</span>{% endif %}</p>
+      <p class="au">{{ p.authors }}</p>
+      <p class="v">{{ p.venue }}{% if p.arxiv %} · <a href="https://arxiv.org/abs/{{ p.arxiv }}">arXiv:{{ p.arxiv }}</a>{% endif %}{% if p.doi %} · <a href="https://doi.org/{{ p.doi }}">DOI</a>{% endif %}{% if p.hal %} · <a href="https://theses.hal.science/{{ p.hal }}">HAL</a>{% endif %}{% if p.pdf %} · <a href="{{ p.pdf | relative_url }}">PDF</a>{% endif %}</p>
+      {% if include.links and p.topic %}<p class="topic"><a href="{{ '/recherche/' | append: p.topic | append: '/physique/' | relative_url }}"><span class="fr">La physique de cet article, expliquée →</span><span class="en">The physics of this paper, explained →</span></a></p>{% endif %}
+    </div>
+  </div>
+{% endfor %}
+{% if list.size == 0 %}<p class="todo-row"><span class="fr">Publications à venir</span><span class="en">Publications to come</span></p>{% endif %}
+</div>

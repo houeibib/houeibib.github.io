@@ -1,0 +1,6 @@
+<header class="phead gut"><div class="max">
+  {% if page.crumbs %}<p class="crumbs">{% for c in page.crumbs %}<a href="{{ c.url | relative_url }}"><span class="fr">{{ c.fr }}</span><span class="en">{{ c.en }}</span></a><span aria-hidden="true"> › </span>{% endfor %}</p>{% endif %}
+  <h1><span class="fr">{{ page.title_fr }}</span><span class="en">{{ page.title_en }}</span></h1>
+  {% if page.lead_fr %}<p class="lead fr">{{ page.lead_fr }}</p><p class="lead en">{{ page.lead_en }}</p>{% endif %}
+  {% if page.deep %}<p class="deep"><a href="{{ page.deep | relative_url }}"><span class="fr">Toute la physique, en détail →</span><span class="en">All the physics, in detail →</span></a></p>{% endif %}
+</div></header>

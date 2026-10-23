@@ -63,3 +63,9 @@ puis ouvrir http://127.0.0.1:8765 (Ctrl+C pour arrêter).
 et les pistes d'étiquettes, produites par les scripts de rendu de `web_animation/` :
 `python3 render.py --theme dark` puis `--theme light` (dans `cme/`), même chose avec
 `render_interp.py` (dans `lwfa_interp/`). La page choisit seule la version du thème actif.
+
+## Publier
+
+`../publier.sh` construit le site et pousse le résultat sur la branche `gh-pages` du dépôt GitHub (`origin`).
+Le code source reste sur `main` (`git add -A && git commit -m "…" && git push`).
+Réglage GitHub, à faire une fois : Settings → Pages → Source « Deploy from a branch », branche `gh-pages`, dossier `/ (root)`.

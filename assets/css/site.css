@@ -334,11 +334,13 @@ a.panel:focus-visible{outline-offset:-3px}
   nav .max{column-gap:20px;row-gap:4px;padding-block:10px}
   nav .max::after{content:"";flex-basis:100%;order:4}
   nav a.l{order:5;padding-block:6px}
-  .hero{height:600px}
-  .panels{grid-template-columns:1fr;grid-template-rows:1fr 1fr}
+  /* mobile : les deux simulations empilées, puis le nom en dessous (plus de superposition) */
+  .hero{--ph:min(520px,124vw);height:auto}
+  .panels{position:relative;height:var(--ph);grid-template-columns:1fr;grid-template-rows:1fr 1fr}
   .panel + .panel{border-left:0;border-top:1px solid var(--rule)}
-  .scrim{height:52%}
-  .seam{top:50%}
+  .scrim{display:none}
+  .seam{top:calc(var(--ph) / 2)}
+  .title{position:static;padding-block:28px 36px}
   .pinfo,.ptag{display:none}
   .intro{grid-template-columns:1fr}
   .photo{width:96px;height:96px}

@@ -34,7 +34,7 @@ function videoTheme(v){
   v.dataset.cur=base;v.poster=base+'_poster.jpg'+q;
   v.innerHTML=`<source src="${base}.webm${q}" type="video/webm"><source src="${base}.mp4${q}" type="video/mp4">`;
   v.load();
-  v.addEventListener('loadedmetadata',()=>{if(!first)v.currentTime=t;if(play)v.play().catch(()=>{});},{once:true});
+  v.addEventListener('loadedmetadata',()=>{if(!first)v.currentTime=t;if(play)v.play().catch(()=>v.dispatchEvent(new Event('pause')));},{once:true});
 }
 
 /* ---------- Simulations : vidéo + étiquettes HTML calées sur une piste (media/*_tracks.js) ---------- */
@@ -68,7 +68,14 @@ function simVideo(id,T,DD,pos,onFrame){
   const pp=box.querySelector('.pp');
   if(pp)pp.addEventListener('click',()=>{v.paused?v.play().catch(()=>{}):v.pause();});
   v.addEventListener('play',()=>{if(pp)pp.textContent='❚❚';});
-  v.addEventListener('pause',()=>{if(pp)pp.textContent='▶';if(T)place(idx(v.currentTime));});
+  // vidéo à l'arrêt (lecture auto bloquée sur mobile, pause) : étiquettes calées sur l'image affichée
+  // (à l'instant 0 l'image est vide : on se place sur l'image de l'affiche)
+  const still=()=>{if(!T||!v.paused)return;
+    if(v.currentTime<1/T.fps&&v.readyState>=1)v.currentTime=(T.poster+.5)/T.fps;else place(idx(v.currentTime));};
+  v.addEventListener('seeked',()=>{if(T&&v.paused)place(idx(v.currentTime));});
+  v.addEventListener('pause',()=>{if(pp)pp.textContent='▶';still();});
+  v.addEventListener('loadedmetadata',still);v.addEventListener('loadeddata',still);
+  still();
   if(reduce){                                           // image fixe = affiche, étiquettes calées dessus
     if(T){const go=()=>{v.currentTime=(T.poster+.5)/T.fps;};go();v.addEventListener('loadedmetadata',go);
       const draw=()=>place(T.poster);draw();addEventListener('resize',draw);}return;}
@@ -80,18 +87,18 @@ function simVideo(id,T,DD,pos,onFrame){
   }else{
     (function loop(){if(!document.hidden)place(idx(v.currentTime));requestAnimationFrame(loop);})();
   }
-  addEventListener('resize',()=>place(idx(v.currentTime)));
+  addEventListener('resize',()=>v.paused?still():place(idx(v.currentTime)));
 }
 
 /* CME : simulation MPI-AMRVAC (plan équatorial), Terre placée sur l'axe de la CME */
 simVideo('cme',window.CME_TRACKS,
-  {wide:{sun:.07,earth:.07,shock:.04,cme:.05},small:{earth:.07,shock:.03}},[0,.45],
+  {wide:{sun:.07,earth:.07,shock:.04,cme:.05},small:{earth:.07,shock:.03,cme:.04}},[0,.45],
   (k,box)=>{const d=window.CME_TRACKS.day[k];
     box.querySelectorAll('.day').forEach(e=>e.textContent=d.toLocaleString(e.dataset.l,{minimumFractionDigits:1,maximumFractionDigits:1}));});
 
 /* LWFA : simulation Smilei, fenêtre recalée sur un référentiel à c */
 simVideo('lwfa',window.LWFA_TRACKS,
-  {wide:{laser:.2,bunch:.1},small:{laser:.3,bunch:.2}},[.6,.5],
+  {wide:{laser:.2,bunch:.1},small:{laser:.13,bunch:.09}},[.6,.5],
   (k,box)=>{const T=window.LWFA_TRACKS,m=box.querySelector('.mev');if(m)m.textContent=T.E[k];
     box.style.setProperty('--p',(k/(T.n-1)).toFixed(4));
     const tv=box.querySelector('.tv');if(tv)tv.textContent=T.travel_um+' µm';});

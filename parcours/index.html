@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Parcours · Ahmed Houeibib</title>
+<script>
+/* langue et thème choisis appliqués avant l'affichage (pas de clignotement) */
+(function(){var l='fr';try{var s=localStorage.getItem('lang');if(s==='fr'||s==='en')l=s;}catch(e){}
+  if(location.hash==='#en')l='en';if(location.hash==='#fr')l='fr';document.documentElement.lang=l;})();
+/* thème : « auto » (pas d'attribut) suit le système ; « light » / « dark » forcés */
+(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=1792764034">
+
+</head>
+<body>
+<nav class="gut"><div class="max">
+  <a class="mark" href="/">A. Houeibib</a>
+  <a class="l" href="/recherche/"><span class="fr">Recherche</span><span class="en">Research</span></a>
+  <a class="l" href="/publications/">Publications</a>
+  <a class="l" href="/parcours/" aria-current="page"><span class="fr">Parcours</span><span class="en">Background</span></a>
+  <div class="lang" role="group" aria-label="Langue / Language">
+    <button type="button" data-l="fr" aria-pressed="true">FR</button>
+    <button type="button" data-l="en" aria-pressed="false">EN</button>
+  </div>
+  <button class="theme" type="button" aria-label="Thème : auto" title="Thème : auto">◐</button>
+</div></nav>
+
+<header class="phead gut"><div class="max">
+  
+  <h1><span class="fr">Parcours</span><span class="en">Background</span></h1>
+  <p class="lead fr">De la mécanique des fluides à la physique des plasmas : formation, postes et compétences.</p><p class="lead en">From fluid mechanics to plasma physics: education, positions and skills.</p>
+  
+</div></header>
+
+<main>
+<div class="gut"><div class="max page-sec">
+  <ol class="timeline">
+    <li><span class="yr">2017 – 2020</span>
+      <p class="w fr">Licence de mécanique</p><p class="w en">BSc in mechanics</p>
+      <p class="d fr">Université de Lille</p><p class="d en">University of Lille</p>
+      <span class="logo" role="img" aria-label="Université de Lille" style="--src:url('/assets/img/lille.svg');--w:150px"></span></li>
+    <li><span class="yr">2020 – 2022</span>
+      <p class="w fr">Master en mécanique des fluides</p><p class="w en">MSc in fluid mechanics</p>
+      <p class="d fr">Université Paris-Saclay</p><p class="d en">Paris-Saclay University</p>
+      <span class="logo" role="img" aria-label="Université Paris-Saclay" style="--src:url('/assets/img/saclay.svg');--w:124px"></span></li>
+    <li><span class="yr">2022 – 2025</span>
+      <p class="w fr">Doctorat en astrophysique</p><p class="w en">PhD in astrophysics</p>
+      <p class="d fr">LIRA, Observatoire de Paris · CNES</p><p class="d en">LIRA, Paris Observatory · CNES</p>
+      <span class="logo" role="img" aria-label="Observatoire de Paris – PSL" style="--src:url('/assets/img/obspm.svg');--w:230px"></span></li>
+    <li class="now"><span class="yr">2025 –</span>
+      <p class="w fr">Postdoctorat</p><p class="w en">Postdoc</p>
+      <p class="d">LLR, CNRS/IN2P3, École polytechnique</p>
+      <span class="logo" role="img" aria-label="École polytechnique" style="--src:url('/assets/img/x.png');--w:150px"></span></li>
+  </ol>
+  <div class="teach">
+    <span class="k fr">Enseignement</span><span class="k en">Teaching</span>
+    <span class="fr">Chargé d'enseignement vacataire · méthodes numériques en C et Python · Université Paris Cité, octobre 2023 – janvier 2024</span>
+    <span class="en">Teaching assistant · numerical methods in C and Python · Université Paris Cité, October 2023 – January 2024</span>
+    <span class="logo" role="img" aria-label="Université Paris Cité" style="--src:url('/assets/img/upc.svg');--w:80px"></span>
+  </div>
+</div></div>
+
+<section class="gut"><div class="max">
+  <div class="sh">
+    <h2><span class="fr">Compétences</span><span class="en">Skills</span></h2>
+    <p class="fr">De la physique au code : utiliser, développer et faire tourner des simulations sur supercalculateur.</p>
+    <p class="en">From physics to code: using, developing and running simulations on supercomputers.</p>
+  </div>
+  <div class="skills">
+    <div><h4 class="fr">Codes de simulation</h4><h4 class="en">Simulation codes</h4>
+      <ul><li>Smilei<span>PIC</span></li><li>MPI-AMRVAC<span>MHD</span></li><li>FLASH<span class="fr">hydrodynamique</span><span class="en">hydrodynamics</span></li></ul></div>
+    <div><h4 class="fr">Développement</h4><h4 class="en">Development</h4>
+      <ul><li>WINTERFELL<span class="fr">suivi de particules, C++</span><span class="en">particle tracer, C++</span></li><li>MPI-AMRVAC<span class="fr">contributions au code</span><span class="en">code contributions</span></li></ul></div>
+    <div><h4 class="fr">Langages</h4><h4 class="en">Languages</h4>
+      <ul><li>Fortran · C++ · C</li><li>Python · LaTeX</li></ul></div>
+    <div><h4 class="fr">Calcul et visualisation</h4><h4 class="en">Computing &amp; visualization</h4>
+      <ul><li>MPI + OpenMP</li><li>ParaView</li></ul></div>
+  </div>
+</div></section>
+
+</main>
+<footer class="gut" id="contact"><div class="max">
+  <div class="links">
+    <span><span class="k fr">Laboratoire</span><span class="k en">Lab</span>LLR, École Polytechnique, 91120 Palaiseau</span>
+    <a href="mailto:houeibib@llr.in2p3.fr"><span class="k">E-mail</span>houeibib@llr.in2p3.fr</a>
+    <a href="https://orcid.org/0009-0004-8287-6678"><span class="k">ORCID</span>0009-0004-8287-6678 ↗</a>
+    <a href="https://www.linkedin.com/in/ahoueibib"><span class="k">LinkedIn</span>ahoueibib ↗</a>
+  </div>
+  <p class="fine"><span>Ahmed Houeibib · Paris</span>
+    <span class="fr">Mis à jour en 10/2026</span><span class="en">Updated October 2026</span></p>
+</div></footer>
+
+<script src="/assets/js/site.js?v=1792764034"></script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Recherche · Ahmed Houeibib</title>
+<script>
+/* langue et thème choisis appliqués avant l'affichage (pas de clignotement) */
+(function(){var l='fr';try{var s=localStorage.getItem('lang');if(s==='fr'||s==='en')l=s;}catch(e){}
+  if(location.hash==='#en')l='en';if(location.hash==='#fr')l='fr';document.documentElement.lang=l;})();
+/* thème : « auto » (pas d'attribut) suit le système ; « light » / « dark » forcés */
+(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=1792764034">
+
+</head>
+<body>
+<nav class="gut"><div class="max">
+  <a class="mark" href="/">A. Houeibib</a>
+  <a class="l" href="/recherche/" aria-current="page"><span class="fr">Recherche</span><span class="en">Research</span></a>
+  <a class="l" href="/publications/">Publications</a>
+  <a class="l" href="/parcours/"><span class="fr">Parcours</span><span class="en">Background</span></a>
+  <div class="lang" role="group" aria-label="Langue / Language">
+    <button type="button" data-l="fr" aria-pressed="true">FR</button>
+    <button type="button" data-l="en" aria-pressed="false">EN</button>
+  </div>
+  <button class="theme" type="button" aria-label="Thème : auto" title="Thème : auto">◐</button>
+</div></nav>
+
+<header class="phead gut"><div class="max">
+  
+  <h1><span class="fr">Recherche</span><span class="en">Research</span></h1>
+  <p class="lead fr">Deux objets, un même savoir-faire : simuler comment un plasma transfère son énergie à des particules. Pour chaque sujet, une page pour comprendre, et une page qui détaille toute la physique.</p><p class="lead en">Two objects, one skill set: simulating how a plasma hands its energy to particles. For each topic, one page to understand it, and one page that details all the physics.</p>
+  
+</div></header>
+
+<main>
+<div class="gut"><div class="max page-sec">
+  <div class="axes">
+    <article class="axis ax-cme">
+      <span class="scale">~10<sup>11</sup> m · ~10<sup>5</sup> s</span>
+      <h3 class="fr">Particules relativistes dans le vent solaire</h3>
+      <h3 class="en">Relativistic particles in the solar wind</h3>
+      <p class="when fr">Thèse · LIRA, Observatoire de Paris · cofinancée par le CNES · 2022 – 2025</p>
+      <p class="when en">PhD · LIRA, Paris Observatory · co-funded by CNES · 2022 – 2025</p>
+      <p class="plain fr"><span class="k">En clair</span>Quand le Soleil éjecte un nuage de plasma magnétisé, l'onde de choc qu'il pousse devant lui peut faire gagner plusieurs milliards d'électronvolts à des particules déjà très rapides. J'ai développé l'outil qui suit ces particules dans des simulations du vent solaire.</p>
+      <p class="plain en"><span class="k">In plain words</span>When the Sun ejects a cloud of magnetised plasma, the shock wave it drives can give billions of electronvolts to particles that are already very fast. I developed the tool that follows these particles through simulations of the solar wind.</p>
+      <p class="tech fr">Simulations MHD 3D (MPI-AMRVAC) d'une CME dans le vent solaire, couplées à l'intégration de particules test en approximation du centre-guide (code WINTERFELL). Les protons gagnent plusieurs GeV par dérive de gradient dans le champ électrique motionnel.</p>
+      <p class="tech en">3D MHD simulations (MPI-AMRVAC) of a CME in the solar wind, coupled with guiding-centre test-particle integration (WINTERFELL code). Protons gain several GeV through gradient drift in the motional electric field.</p>
+      <div class="chips"><span class="chip">MHD 3D</span><span class="chip">guiding centre</span><span class="chip">GeV</span><span class="chip">space weather</span></div>
+      <p class="more">
+        <a href="/recherche/cme/"><span class="fr">Comprendre →</span><span class="en">Understand →</span></a>
+        <a href="/recherche/cme/physique/"><span class="fr">Toute la physique →</span><span class="en">All the physics →</span></a>
+      </p>
+    </article>
+    <article class="axis ax-lwfa">
+      <span class="scale">~10<sup>−5</sup> m · ~10<sup>−12</sup> s</span>
+      <h3 class="fr">Canaux plasma pour l'accélération laser-plasma</h3>
+      <h3 class="en">Plasma channels for laser-plasma acceleration</h3>
+      <p class="when">Postdoc · LLR · 2025 –</p>
+      <p class="plain fr"><span class="k">En clair</span>Les accélérateurs laser-plasma pourraient tenir sur une table là où il faut aujourd'hui des kilomètres. Pour cela, le laser doit rester concentré sur plusieurs centimètres : je simule les « fibres optiques » de plasma qui le guident.</p>
+      <p class="plain en"><span class="k">In plain words</span>Laser-plasma accelerators could fit on a tabletop where today's machines span kilometres. For that, the laser must stay focused over several centimetres. I simulate the plasma "optical fibres" that guide it.</p>
+      <p class="tech fr">Modélisation des canaux HOFI par une chaîne multi-échelle PIC → fluide → PIC : Smilei pour l'ionisation et le chauffage, un code fluide (FLASH) pour l'expansion à l'échelle de la nanoseconde, puis le guidage laser.</p>
+      <p class="tech en">Modelling HOFI channels with a multi-scale PIC → fluid → PIC pipeline: Smilei for ionization and heating, a fluid code (FLASH) for the nanosecond expansion, then laser guiding.</p>
+      <div class="chips"><span class="chip">PIC 3D</span><span class="chip">10<sup>17</sup> W/cm<sup>2</sup></span><span class="chip">non-LTE</span><span class="chip">multi-scale</span></div>
+      <p class="more">
+        <a href="/recherche/lwfa/"><span class="fr">Comprendre →</span><span class="en">Understand →</span></a>
+        <a href="/recherche/lwfa/physique/"><span class="fr">Toute la physique →</span><span class="en">All the physics →</span></a>
+      </p>
+    </article>
+  </div>
+</div></div>
+
+</main>
+<footer class="gut" id="contact"><div class="max">
+  <div class="links">
+    <span><span class="k fr">Laboratoire</span><span class="k en">Lab</span>LLR, École Polytechnique, 91120 Palaiseau</span>
+    <a href="mailto:houeibib@llr.in2p3.fr"><span class="k">E-mail</span>houeibib@llr.in2p3.fr</a>
+    <a href="https://orcid.org/0009-0004-8287-6678"><span class="k">ORCID</span>0009-0004-8287-6678 ↗</a>
+    <a href="https://www.linkedin.com/in/ahoueibib"><span class="k">LinkedIn</span>ahoueibib ↗</a>
+  </div>
+  <p class="fine"><span>Ahmed Houeibib · Paris</span>
+    <span class="fr">Mis à jour en 10/2026</span><span class="en">Updated October 2026</span></p>
+</div></footer>
+
+<script src="/assets/js/site.js?v=1792764034"></script>
+
+</body>
+</html>

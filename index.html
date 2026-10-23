@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ahmed Houeibib</title>
+<script>
+/* langue et thème choisis appliqués avant l'affichage (pas de clignotement) */
+(function(){var l='fr';try{var s=localStorage.getItem('lang');if(s==='fr'||s==='en')l=s;}catch(e){}
+  if(location.hash==='#en')l='en';if(location.hash==='#fr')l='fr';document.documentElement.lang=l;})();
+/* thème : « auto » (pas d'attribut) suit le système ; « light » / « dark » forcés */
+(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch(e){}})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="/assets/css/site.css?v=1792764034">
+
+</head>
+<body>
+<nav class="gut"><div class="max">
+  <a class="mark" href="/">A. Houeibib</a>
+  <a class="l" href="/recherche/"><span class="fr">Recherche</span><span class="en">Research</span></a>
+  <a class="l" href="/publications/">Publications</a>
+  <a class="l" href="/parcours/"><span class="fr">Parcours</span><span class="en">Background</span></a>
+  <div class="lang" role="group" aria-label="Langue / Language">
+    <button type="button" data-l="fr" aria-pressed="true">FR</button>
+    <button type="button" data-l="en" aria-pressed="false">EN</button>
+  </div>
+  <button class="theme" type="button" aria-label="Thème : auto" title="Thème : auto">◐</button>
+</div></nav>
+
+
+<main>
+<header class="hero" id="top">
+  <div class="panels">
+    
+<a class="panel p-cme" href="/recherche/cme/">
+  <video id="cme" muted loop playsinline preload="auto" data-base="/media/cme" data-v="1792764034"
+         poster="/media/cme_poster.jpg"
+         aria-label="Simulation MPI-AMRVAC : une éjection de masse coronale quitte le Soleil et traverse l'orbite terrestre"></video>
+  <div class="anno" aria-hidden="true">
+    <div class="ann down a-sun" data-k="sun"><span class="ln"></span><span class="lb"><span class="fr">Soleil</span><span class="en">Sun</span></span></div>
+    <div class="ann down a-earth" data-k="earth"><span class="ln"></span><span class="lb"><span class="fr">Terre</span><span class="en">Earth</span></span></div>
+    <div class="ann side a-shock" data-k="shock"><span class="ln"></span><span class="lb"><span class="fr">choc</span><span class="en">shock</span></span></div>
+    <div class="ann up a-cme" data-k="cme"><span class="ln"></span><span class="lb"><span class="fr">nuage éjecté</span><span class="en">ejected cloud</span></span></div>
+  </div>
+  <div class="plabel"><b>CME</b><span>~10<sup>11</sup> m · ~10<sup>5</sup> s</span></div>
+  <div class="pinfo hov">
+    <p class="cap fr">Un nuage de plasma magnétisé éjecté par le Soleil atteint l'orbite terrestre en ~1,2 jour. Simulation MHD 3D (MPI-AMRVAC), plan équatorial.</p>
+    <p class="cap en">A magnetised plasma cloud ejected by the Sun reaches Earth's orbit in ~1.2 days. 3D MHD simulation (MPI-AMRVAC), equatorial plane.</p>
+    <p class="go"><span class="fr">Comprendre cette simulation →</span><span class="en">Understand this simulation →</span></p>
+  </div>
+  
+</a>
+<script src="/media/cme_tracks.js?v=1792764034"></script>
+
+    
+<a class="panel p-lwfa" href="/recherche/lwfa/">
+  <video id="lwfa" muted loop playsinline preload="auto" data-base="/media/lwfa" data-v="1792764034"
+         poster="/media/lwfa_poster.jpg"
+         aria-label="Simulation Smilei : un laser intense creuse une bulle dans un plasma et accélère des électrons dans son sillage"></video>
+  <div class="anno" aria-hidden="true">
+    <div class="ann up a-laser" data-k="laser"><span class="ln"></span><span class="lb">laser →</span></div>
+    <div class="ann up a-bunch" data-k="bunch"><span class="ln"></span><span class="dot"></span><span class="lb"><span class="fr">e⁻ accélérés</span><span class="en">accelerated e⁻</span> · <b class="mev">0</b> MeV</span></div>
+  </div>
+  <div class="plabel"><b>LWFA</b><span>~10<sup>−5</sup> m · ~10<sup>−12</sup> s</span></div>
+  <div class="pinfo">
+    <p class="cap fr">Une impulsion laser traverse un gaz ionisé (plasma) et creuse une bulle dans son sillage ; des électrons piégés y gagnent ~200 MeV en 0,3 mm. Simulation PIC (Smilei).</p>
+    <p class="cap en">A laser pulse crosses an ionised gas (plasma) and carves a bubble in its wake; trapped electrons gain ~200 MeV in 0.3 mm. PIC simulation (Smilei).</p>
+    <p class="go"><span class="fr">Comprendre cette simulation →</span><span class="en">Understand this simulation →</span></p>
+    <div class="prog"><span class="fr">parcours dans le gaz</span><span class="en">distance in the gas</span><span class="tk"></span><span class="tv">290 µm</span></div>
+  </div>
+  <div class="ptag a-plasma" aria-hidden="true"><span class="fr">plasma (gaz ionisé)</span><span class="en">plasma (ionised gas)</span></div>
+  
+</a>
+<script src="/media/lwfa_tracks.js?v=1792764034"></script>
+
+  </div>
+  <div class="seam">× 10<sup>16</sup></div>
+  <div class="scrim"></div>
+  <div class="title gut"><div class="max">
+    <h1>Ahmed<br>Houeibib</h1>
+    <p class="tag fr">Des particules accélérées.<br><em>Par le Soleil.</em> <i>Par la lumière.</i></p>
+    <p class="tag en">Particles, accelerated.<br><em>By the Sun.</em> <i>By light.</i></p>
+  </div></div>
+</header>
+
+<div class="gut"><div class="max intro">
+  <img class="photo" src="/assets/img/profil.jpg" alt="Ahmed Houeibib" width="240" height="240">
+  <div>
+    <p class="who fr">Astrophysicien et physicien des plasmas · chercheur postdoctoral</p>
+    <p class="who en">Astrophysicist and plasma physicist · postdoctoral researcher</p>
+    <p class="aff">Laboratoire Leprince-Ringuet · CNRS/IN2P3 · École Polytechnique</p>
+    <p class="bio fr">Pendant ma thèse, j'ai étudié comment les éjections de masse coronale accélèrent des particules relativistes dans le vent solaire. Aujourd'hui, je modélise les canaux plasma qui guident les lasers intenses dans les accélérateurs laser-plasma. Seize ordres de grandeur séparent ces deux échelles ; la physique et les outils restent les mêmes.</p>
+    <p class="bio en">During my PhD I studied how coronal mass ejections accelerate relativistic particles in the solar wind. Today I model the plasma channels that guide intense lasers in laser-plasma accelerators. Sixteen orders of magnitude separate these two scales; the physics and the tools stay the same.</p>
+  </div>
+</div></div>
+
+<section class="gut"><div class="max">
+  <div class="sh">
+    <h2><span class="fr">Recherche</span><span class="en">Research</span></h2>
+    <p class="fr">Deux objets, un même savoir-faire : simuler comment un plasma transfère son énergie à des particules.</p>
+    <p class="en">Two objects, one skill set: simulating how a plasma hands its energy to particles.</p>
+  </div>
+  <div class="axes">
+    <article class="axis ax-cme">
+      <span class="scale">~10<sup>11</sup> m · ~10<sup>5</sup> s</span>
+      <h3 class="fr">Particules relativistes dans le vent solaire</h3>
+      <h3 class="en">Relativistic particles in the solar wind</h3>
+      <p class="plain fr">Quand le Soleil éjecte un nuage de plasma magnétisé, l'onde de choc qu'il pousse devant lui peut faire gagner plusieurs milliards d'électronvolts à des particules déjà très rapides.</p>
+      <p class="plain en">When the Sun ejects a cloud of magnetised plasma, the shock wave it drives can give billions of electronvolts to particles that are already very fast.</p>
+      <p class="more">
+        <a href="/recherche/cme/"><span class="fr">Comprendre →</span><span class="en">Understand →</span></a>
+        <a href="/recherche/cme/physique/"><span class="fr">Toute la physique →</span><span class="en">All the physics →</span></a>
+      </p>
+    </article>
+    <article class="axis ax-lwfa">
+      <span class="scale">~10<sup>−5</sup> m · ~10<sup>−12</sup> s</span>
+      <h3 class="fr">Canaux plasma pour l'accélération laser-plasma</h3>
+      <h3 class="en">Plasma channels for laser-plasma acceleration</h3>
+      <p class="plain fr">Les accélérateurs laser-plasma pourraient tenir sur une table là où il faut aujourd'hui des kilomètres, à condition de guider le laser sur plusieurs centimètres.</p>
+      <p class="plain en">Laser-plasma accelerators could fit on a tabletop where today's machines span kilometres, provided the laser is guided over several centimetres.</p>
+      <p class="more">
+        <a href="/recherche/lwfa/"><span class="fr">Comprendre →</span><span class="en">Understand →</span></a>
+        <a href="/recherche/lwfa/physique/"><span class="fr">Toute la physique →</span><span class="en">All the physics →</span></a>
+      </p>
+    </article>
+  </div>
+</div></section>
+
+</main>
+<footer class="gut" id="contact"><div class="max">
+  <div class="links">
+    <span><span class="k fr">Laboratoire</span><span class="k en">Lab</span>LLR, École Polytechnique, 91120 Palaiseau</span>
+    <a href="mailto:houeibib@llr.in2p3.fr"><span class="k">E-mail</span>houeibib@llr.in2p3.fr</a>
+    <a href="https://orcid.org/0009-0004-8287-6678"><span class="k">ORCID</span>0009-0004-8287-6678 ↗</a>
+    <a href="https://www.linkedin.com/in/ahoueibib"><span class="k">LinkedIn</span>ahoueibib ↗</a>
+  </div>
+  <p class="fine"><span>Ahmed Houeibib · Paris</span>
+    <span class="fr">Mis à jour en 10/2026</span><span class="en">Updated October 2026</span></p>
+</div></footer>
+
+<script src="/assets/js/site.js?v=1792764034"></script>
+
+</body>
+</html>

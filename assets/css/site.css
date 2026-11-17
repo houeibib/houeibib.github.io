@@ -352,3 +352,19 @@ a.panel:focus-visible{outline-offset:-3px}
   .fig .schema{min-width:560px}
   section{padding-block:52px}
 }
+
+/* Page Publications : intertitres */
+.pub-h{font-stretch:112%;font-weight:700;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:48px 0 8px}
+.page-sec > .pub-h:first-child{margin-top:0}
+
+/* Page Parcours : frise à cinq étapes, enseignement sur trois colonnes, lien CV */
+@media (min-width:901px){.timeline{grid-template-columns:repeat(5,1fr)}}
+.skills.three{grid-template-columns:repeat(3,1fr)}
+.skills li span.ti{display:inline;font:inherit;color:inherit}
+.cv-dl{margin:40px 0 24px;padding-top:20px;border-top:1px solid var(--rule);font:500 13px var(--mono)}
+#enseignement{margin-bottom:56px}
+@media (max-width:900px){.skills.three{grid-template-columns:1fr}.skills.three > div,.skills.three > div + div{padding-left:0;border-left:0;border-bottom:1px solid var(--rule);padding-bottom:16px}}
+
+/* Page Recherche : troisième axe (Mercure), sur toute la largeur */
+.ax-mercure{grid-column:1/-1}
+.ax-mercure .scale{background:var(--plasma-soft);color:var(--plasma)}

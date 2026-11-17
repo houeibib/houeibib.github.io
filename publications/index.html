@@ -5,7 +5,22 @@ lead_fr: "Articles, thèse et communications. Pour chaque article, une page expl
 lead_en: "Papers, thesis and talks. For each paper, a page explains in detail the physics needed to read it."
 ---
 <div class="gut"><div class="max page-sec">
+  <h3 class="pub-h"><span class="fr">Articles et thèse</span><span class="en">Papers and thesis</span></h3>
   {% include pubs.html links=true %}
-  <p class="todo-row fr">Communications : poster EGU, conférences, séminaires</p>
-  <p class="todo-row en">Talks and posters: EGU poster, conferences, seminars</p>
+
+  <h3 class="pub-h"><span class="fr">Résumés de conférences</span><span class="en">Conference abstracts</span></h3>
+  {% include pubs.html src="abstracts" %}
+
+  <h3 class="pub-h"><span class="fr">Communications</span><span class="en">Talks and posters</span></h3>
+  <div class="pubs">
+  {% for c in site.data.communications %}
+    <div class="pub">
+      <span class="yr">{{ c.year }}</span>
+      <div>
+        <p class="t">{{ c.event }}<span class="badge">{{ c.type }}</span></p>
+        <p class="v"><span class="fr">{{ c.date_fr }}</span><span class="en">{{ c.date_en }}</span> · {{ c.place }}</p>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
 </div></div>

@@ -1,8 +1,8 @@
 {% comment %}
   Liste des publications (_data/publications.yml). Paramètres : topic (cme, lwfa…) pour filtrer ;
-  links=true pour ajouter le lien vers la page physique du sujet.
+  src=abstracts pour lire un autre fichier de _data ; links=true pour ajouter le lien vers la page physique du sujet.
 {% endcomment %}
-{% assign list = site.data.publications %}
+{% assign list = site.data[include.src] | default: site.data.publications %}
 {% if include.topic %}{% assign list = list | where: "topic", include.topic %}{% endif %}
 <div class="pubs">
 {% for p in list %}

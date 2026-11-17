@@ -9,6 +9,9 @@
 | la page « comprendre » d'un sujet         | `recherche/cme/index.md`, `recherche/lwfa/index.md`  |
 | la page « toute la physique » d'un sujet  | `recherche/cme/physique/index.md`, `recherche/lwfa/physique/index.md` |
 | la liste des publications                 | `_data/publications.yml`                             |
+| les résumés de conférences                | `_data/abstracts.yml`                                |
+| les communications (posters, oraux)       | `_data/communications.yml`                           |
+| le CV téléchargeable                      | `assets/cv_Houeibib.pdf` (copie du PDF LaTeX)        |
 | le parcours et les compétences            | `parcours/index.html`                                |
 | le contact (bas de chaque page)           | `_includes/footer.html`                              |
 | le menu                                   | `_includes/nav.html`                                 |

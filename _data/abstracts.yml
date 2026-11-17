@@ -1,0 +1,27 @@
+# Résumés de conférences (affichés sur la page Publications). Mêmes champs que publications.yml.
+
+- year: 2026
+  title: "Acceleration of relativistic protons in a CME-perturbed solar wind"
+  authors: "<b>A. Houeibib</b>, F. Pantellini, L. Griton"
+  venue: "EGU General Assembly, EGU26-19733"
+  badge: "EGU"
+  doi: "10.5194/egusphere-egu26-19733"
+
+- year: 2026
+  title: "The dynamic response of Mercury's magnetosphere to solar wind forcing: consequences for the acceleration of charged particles in a telluric planetary environment"
+  authors: "I. Mertz, L. Griton, F. Pantellini, <b>A. Houeibib</b>, K. Issautier, B. Verkampt, K. Girgis"
+  venue: "EGU General Assembly, EGU26-17940"
+  badge: "EGU"
+  doi: "10.5194/egusphere-egu26-17940"
+
+- year: 2024
+  title: "Exploring Solar Energetic Particles Transport in the Inner Heliosphere"
+  authors: "<b>A. Houeibib</b>, F. Pantellini, L. Griton"
+  venue: "EGU General Assembly, EGU24-17085"
+  badge: "EGU"
+
+- year: 2024
+  title: "Multi-technique investigation of Mercury's southern magnetosphere based on BepiColombo first swingbys"
+  authors: "L. Griton, W. Exner, D. Heyner, <b>A. Houeibib</b>, K. Issautier, Y. Kasaba, H. Kojima, M. Moncuquet, F. Pantellini"
+  venue: "EGU General Assembly, EGU24-18888"
+  badge: "EGU"

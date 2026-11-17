@@ -5,11 +5,17 @@
 - year: 2026
   title: "Acceleration of relativistic protons in a solar wind perturbed by a coronal mass ejection"
   authors: "<b>A. Houeibib</b>, F. Pantellini, L. Griton"
-  venue: "Astronomy & Astrophysics"
+  venue: "Astronomy & Astrophysics 714, A70"
   badge: "A&A"
   arxiv: "2602.23723"
   doi: "10.1051/0004-6361/202659655"
   topic: cme
+
+- year: 2026
+  title: "Dynamics of 5-keV protons in Mercury's space environment by using KT17 and MHD magnetosphere models coupled with test particle simulations"
+  authors: "K.M. Girgis, L. Griton, I. Mertz, <b>A. Houeibib</b> et al."
+  venue: "Earth, Planets and Space · soumis / submitted"
+  badge: "EPS"
 
 - year: 2025
   title: "Dynamics of energetic electrons scattered in the solar wind: Magnetohydrodynamics and test-particle simulations"

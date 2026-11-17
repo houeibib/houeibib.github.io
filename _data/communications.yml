@@ -1,0 +1,9 @@
+# Communications présentées (page Publications). type : poster ou oral.
+
+- {year: 2026, date_fr: "4–8 mai", date_en: "4–8 May", event: "EGU General Assembly", place: "Vienne / Vienna", type: poster}
+- {year: 2024, date_fr: "16–18 octobre", date_en: "16–18 October", event: "Journées Jeunes Chercheurs du CNES", place: "Toulouse", type: oral}
+- {year: 2024, date_fr: "17–20 juin", date_en: "17–20 June", event: "SOLER Workshop", place: "Helsinki", type: oral}
+- {year: 2024, date_fr: "14–19 avril", date_en: "14–19 April", event: "EGU General Assembly", place: "Vienne / Vienna", type: poster}
+- {year: 2024, date_fr: "8–12 janvier", date_en: "8–12 January", event: "Colloque du PNST", place: "Marseille", type: poster}
+- {year: 2023, date_fr: "12–16 juin", date_en: "12–16 June", event: "Solar Wind 16", place: "Pacific Grove, Californie / California", type: poster}
+- {year: 2023, date_fr: "29–31 mars", date_en: "29–31 March", event: "Conférence Elbereth", place: "IAP, Paris", type: oral}
